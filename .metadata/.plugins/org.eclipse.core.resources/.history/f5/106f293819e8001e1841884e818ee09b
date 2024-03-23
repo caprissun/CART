@@ -1,0 +1,83 @@
+package dto;
+
+import dto.NonUserDTO; // NonUserDTO 클래스를 import
+import dto.UserDTO; // UserDTO 클래스를 import
+import dto.ProductDTO; // ProductDTO 클래스를 import
+
+public class CartDTO {
+    private int cartNo; // 장바구니 고유번호
+    private ProductDTO productDTO; // 상품 정보
+    private int cartQty; // 장바구니에 담긴 특정 상품의 수량
+    private UserDTO userDTO; // 장바구니에 상품을 추가한 사용자 정보
+    private NonUserDTO nonUserDTO; // 비회원 고유번호
+    
+    // 생성자
+    public CartDTO(int cartNo, UserDTO userDTO, ProductDTO productDTO,
+                   int cartQty, NonUserDTO nonUserDTO) {
+        super();
+        this.cartNo = cartNo;  
+        this.userDTO = userDTO; 
+        this.productDTO = productDTO;
+        this.cartQty = cartQty;
+        this.nonUserDTO = nonUserDTO;
+    }
+    
+    // 기본 생성자
+    public CartDTO() {
+        super();
+    }
+    
+    // Getter 및 Setter 메서드들
+    public int getCartNo() {
+        return cartNo;
+    }
+    
+    public void setCartNo(int cartNo) {
+        this.cartNo = cartNo;
+    }
+    
+    public UserDTO getUserDTO() {
+        return userDTO;
+    }
+    
+    public void setUserDTO(UserDTO userDTO) {
+        this.userDTO = userDTO;
+    }
+    
+    public ProductDTO getProductDTO() {
+        return productDTO;
+    }
+    
+    public void setProductDTO(ProductDTO productDTO) {
+        this.productDTO = productDTO;
+    }
+    
+    public int getCartQty() {
+        return cartQty;
+    }
+    
+    public void setCartQty(int cartQty) {
+        this.cartQty = cartQty;
+    }
+    
+    // 상품 이미지를 나타내는 변수
+    private String productImage;
+    
+    // 상품 이미지 Getter 및 Setter 메서드
+    public String getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(String productImage) {
+        this.productImage = productImage;
+    }
+    
+    // 비회원 고유번호 Getter 및 Setter 메서드
+    public NonUserDTO getNonUserDTO() {
+        return nonUserDTO;
+    }
+
+    public void setNonUserDTO(NonUserDTO nonUserDTO) {
+        this.nonUserDTO = nonUserDTO;
+    }
+}

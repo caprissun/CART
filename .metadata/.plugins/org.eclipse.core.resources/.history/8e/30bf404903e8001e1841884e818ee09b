@@ -1,0 +1,73 @@
+package dto;
+
+public class CartDTO extends PageCnt{
+	private int cartNo; //장바구니 고유번호
+	private ProductDTO productDTO; //상품 정보
+	private int cartQty; // 장바구니에 담긴 특정 상품의 수량
+	private UserDTO userDTO; //장바구니에 상품을 추가한 사용자 정보
+	private nonUserDTO nonUserDTO; // 비회원 고유번호
+	public CartDTO(int cartNo, UserDTO userDTO, ProductDTO productDTO,
+			       int cartQty, String nonUserId) {
+		super();
+		this.cartNo = cartNo;  
+		this.userDTO = userDTO; 
+		this.productDTO = productDTO;
+		this.cartQty = cartQty;
+		this.nonUserDTO = nonUserDTO;
+	}
+	public CartDTO() {
+		super();
+	}
+	public int getCartNo() {
+		return cartNo;
+	}
+	public void setCartNo(int cartNo) {
+		this.cartNo = cartNo;
+	}
+	public UserDTO getUserDTO() {
+		return userDTO;
+	}
+	public void setUserDTO(UserDTO userDTO) {
+		this.userDTO = userDTO;
+	}
+	public ProductDTO getProductDTO() {
+		return productDTO;
+	}
+	public void setProductDTO(ProductDTO productDTO) {
+		this.productDTO = productDTO;
+	}
+	public int getCartQty() {
+		return cartQty;
+	}
+	public void setCartQty(int cartQty) {
+		this.cartQty = cartQty;
+	}
+	
+	public void setPageCnt(int pageCnt) { 
+		super.setPageCnt(pageCnt);
+	}
+	
+
+	public int getPageCnt() { 
+		return super.getPageCnt();
+	}
+	
+    private String productImage; // 상품의 이미지를 나타내는 변수
+
+
+    public String getProductImage() {
+        return productImage;
+    }
+
+    public void setProductImage(String productImage) {
+        this.productImage = productImage;
+    }
+    
+    public String getnonUserId() {
+        return nonUserId;
+    }
+
+    public void setnonUserId(String nonUserId) {
+        this.nonUserId = nonUserId;
+    }
+}
